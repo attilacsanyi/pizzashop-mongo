@@ -1,0 +1,34 @@
+<aspectj>
+<aspects>
+<aspect name="hu.attila.csanyi.mongo.pizza.domain.Topping_Roo_JavaBean"/>
+<aspect name="hu.attila.csanyi.mongo.pizza.domain.PizzaOrder_Roo_JavaBean"/>
+<aspect name="hu.attila.csanyi.mongo.pizza.domain.PizzaOrder_Roo_Mongo_Entity"/>
+<aspect name="hu.attila.csanyi.mongo.pizza.service.ToppingService_Roo_Service"/>
+<aspect name="hu.attila.csanyi.mongo.pizza.domain.Pizza_Roo_ToString"/>
+<aspect name="hu.attila.csanyi.mongo.pizza.domain.Pizza_Roo_JavaBean"/>
+<aspect name="hu.attila.csanyi.mongo.pizza.web.BaseController_Roo_Controller"/>
+<aspect name="hu.attila.csanyi.mongo.pizza.service.BaseServiceImpl_Roo_Service"/>
+<aspect name="hu.attila.csanyi.mongo.pizza.domain.Base_Roo_ToString"/>
+<aspect name="hu.attila.csanyi.mongo.pizza.domain.Topping_Roo_ToString"/>
+<aspect name="hu.attila.csanyi.mongo.pizza.repository.PizzaRepository_Roo_Mongo_Repository"/>
+<aspect name="hu.attila.csanyi.mongo.pizza.service.ToppingServiceImpl_Roo_Service"/>
+<aspect name="hu.attila.csanyi.mongo.pizza.domain.PizzaOrder_Roo_ToString"/>
+<aspect name="hu.attila.csanyi.mongo.pizza.service.PizzaOrderService_Roo_Service"/>
+<aspect name="hu.attila.csanyi.mongo.pizza.web.ApplicationConversionServiceFactoryBean_Roo_ConversionService"/>
+<aspect name="hu.attila.csanyi.mongo.pizza.web.PizzaOrderController_Roo_Controller"/>
+<aspect name="hu.attila.csanyi.mongo.pizza.repository.ToppingRepository_Roo_Mongo_Repository"/>
+<aspect name="hu.attila.csanyi.mongo.pizza.repository.PizzaOrderRepository_Roo_Mongo_Repository"/>
+<aspect name="hu.attila.csanyi.mongo.pizza.web.PizzaController_Roo_Controller"/>
+<aspect name="hu.attila.csanyi.mongo.pizza.service.PizzaService_Roo_Service"/>
+<aspect name="hu.attila.csanyi.mongo.pizza.domain.Base_Roo_JavaBean"/>
+<aspect name="hu.attila.csanyi.mongo.pizza.service.PizzaServiceImpl_Roo_Service"/>
+<aspect name="hu.attila.csanyi.mongo.pizza.repository.BaseRepository_Roo_Mongo_Repository"/>
+<aspect name="hu.attila.csanyi.mongo.pizza.domain.Topping_Roo_Mongo_Entity"/>
+<aspect name="hu.attila.csanyi.mongo.pizza.service.BaseService_Roo_Service"/>
+<aspect name="hu.attila.csanyi.mongo.pizza.service.PizzaOrderServiceImpl_Roo_Service"/>
+<aspect name="hu.attila.csanyi.mongo.pizza.domain.Base_Roo_Mongo_Entity"/>
+<aspect name="hu.attila.csanyi.mongo.pizza.web.ToppingController_Roo_Controller"/>
+<aspect name="hu.attila.csanyi.mongo.pizza.domain.Pizza_Roo_Mongo_Entity"/>
+</aspects>
+</aspectj>
+

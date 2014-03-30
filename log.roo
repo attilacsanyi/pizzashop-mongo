@@ -1,0 +1,92 @@
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-09-29 23:46:59
+project --topLevelPackage hu.attila.csanyi.mongo.pizza --projectName PizzaMongo --java 6 --packaging JAR
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-09-29 23:47:08
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-09-29 23:47:11
+mongo setup --cloudFoundry true
+entity mongo --class ~.domain.Base --testAutomatically
+field string --fieldName name --sizeMin 2 --notNull --class ~.domain.Base
+entity mongo --class ~.domain.Topping --testAutomatically
+field string --fieldName name --sizeMin 2 --notNull --class ~.domain.Topping
+entity mongo --class ~.domain.Pizza --testAutomatically
+field string --fieldName name --notNull --sizeMin 2 --class ~.domain.Pizza
+field number --fieldName price --type java.lang.Float
+field set --fieldName toppings --type ~.domain.Topping
+field reference --fieldName base --type ~.domain.Base
+entity mongo --class ~.domain.PizzaOrder --testAutomatically
+field string --fieldName name --notNull --sizeMin 2 --class ~.domain.PizzaOrder
+field string --fieldName address --sizeMax 30
+field number --fieldName total --type java.lang.Float
+field date --fieldName deliveryDate --type java.util.Date
+field set --fieldName pizzas --type ~.domain.Pizza
+repository mongo --interface ~.repository.ToppingRepository --entity ~.domain.Topping
+repository mongo --interface ~.repository.BaseRepository --entity ~.domain.Base
+repository mongo --interface ~.repository.PizzaRepository --entity ~.domain.Pizza
+repository mongo --interface ~.repository.PizzaOrderRepository --entity ~.domain.PizzaOrder
+service --interface ~.service.ToppingService --entity ~.domain.Topping
+service --interface ~.service.BaseService --entity ~.domain.Base
+service --interface ~.service.PizzaService --entity ~.domain.Pizza
+service --interface ~.service.PizzaOrderService --entity ~.domain.PizzaOrder
+web mvc setup
+web mvc all --package ~.web
+// [failed] perform package
+osgi obr url add --url http://spring-roo-repository.springsource.org/repository.xml
+osgi obr start --bundleSymbolicName org.springframework.roo.addon.cloud.foundry
+osgi obr url remove --url http://spring-roo-repository.springsource.org/repository.xml
+addon install id --searchResultId 01
+cloud foundry login
+cloud foundry login --email cs_ati@yahoo.com --password XAHSTWzM
+cloud foundry deploy --appName roo-pizzashop-mongo --path target/PizzaMongo-0.1.0.BUILD-SNAPSHOT.war --memory 512
+cloud foundry create service --serviceName pizzashop-mongo --serviceType mongodb
+// [failed] cloud foundry bind service --serviceName pizzashop-mongo --appName roo-pizzashop
+// [failed] cloud foundry bind service --serviceName pizzashop-mongo --appName roo-pizzashop
+cloud foundry bind service --serviceName pizzashop-mongo --appName roo-pizzashop-mongo
+cloud foundry start app --appName roo-pizzashop-mongo
+cloud foundry info
+// [failed] cloud foundry view logs --appName roo-pizzashop-mongo
+// [failed] cloud foundry view logs --appName spring-demo
+// [failed] cloud foundry view logs --appName spring-demo
+cloud foundry login --email cs_ati@yahoo.com --password XAHSTWzM
+// [failed] cloud foundry view logs --appName spring-demo
+cloud foundry view crashes --appName spring-demo
+cloud foundry view crashes --appName roo-pizzashop-mongo
+cloud foundry restart app --appName roo-pizzashop-mongo
+// [failed] cloud foundry view logs --appName roo-pizzashop-mongo
+cloud foundry view crashes --appName roo-pizzashop-mongo
+cloud foundry view crashes --appName roo-pizzashop-mongo
+cloud foundry view crashes --appName roo-pizzashop-mongo
+// [failed] cloud foundry view logs --appName roo-pizzashop-mongo
+// [failed] cloud foundry view logs --appName roo-pizzashop-mongo
+// [failed] cloud foundry view logs --appName roo-pizzashop-mongo
+cloud foundry info 
+cloud foundry list services
+cloud foundry list apps
+// [failed] cloud foundry view logs --appName roo-pizzashop-mongo
+// [failed] cloud foundry files --appName roo-pizzashop-mongo --path target
+// [failed] cloud foundry files --appName roo-pizzashop-mongo --path WEB-INF
+cloud foundry list instances --appName roo-pizzashop-mongo --num 
+cloud foundry list instances --appName roo-pizzashop-mongo --num 2
+cloud foundry list instances --appName roo-pizzashop-mongo
+cloud foundry view logs --appName roo-pizzashop-mongo --instance 1
+// [failed] cloud foundry view logs --appName roo-pizzashop-mongo --instance 2
+cloud foundry view logs --appName roo-pizzashop-mongo --instance 1
+cloud foundry login --email cs_ati@yahoo.com --password XAHSTWzM
+// [failed] cloud foundry deploy --appName roo-pizzashop --path /target/PizzaMongo-0.1.0.BUILD-SNAPSHOT.war --memory 512
+cloud foundry deploy --appName roo-pizzashop-mongo --path target/PizzaMongo-0.1.0.BUILD-SNAPSHOT.war --memory 512
+cloud foundry create service --serviceName pizzashop-mongo-service --serviceType mongodb
+cloud foundry bind service --serviceName pizzashop-mongo-service --appName roo-pizzashop-mongo
+cloud foundry start app --appName roo-pizzashop-mongo
+cloud foundry restart app --appName roo-pizzashop-mongo
+cloud foundry view logs --appName roo-pizzashop-mongo --instance 1
+cloud foundry view logs --appName roo-pizzashop-mongo --instance 1
+cloud foundry view logs --appName roo-pizzashop-mongo --instance 1
+// [failed] cloud foundry view logs --appName roo-pizzashop-mongo --instance 2
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-09-30 00:48:56
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-09-30 21:15:35
+addon list 
+pgp trust --keyId 0xC5FC814B
+addon install bundle --bundleSymbolicName org.springframework.flex.roo.addon
+osgi obr url list
+quit
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-09-30 22:39:44
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-10-07 00:36:50
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-10-07 00:38:02
